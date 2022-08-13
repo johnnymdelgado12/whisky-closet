@@ -1,0 +1,13 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="partials/head :: head('Home - Whiskey Closet')"></head>
+
+    <body>
+        <nav th:replace="partials/navbar :: navbar"></nav>
+
+        <h1 th:text="${welcome}"/>
+
+        <script th:replace="partials/scripts :: scripts"></script>
+
+    </body>
+</html>
