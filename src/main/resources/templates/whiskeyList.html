@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Hello</h1>
-</body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="partials/head :: head('Whiskey Closet')"></head>
+    <body>
+        <nav th:replace="partials/navbar :: navbar"></nav>
+
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Distillery</th>
+                    <th scope="col">Age Statement</th>
+                    <th scope="col">Blended</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Taste Notes</th>
+                </tr>
+            </thead>
+
+            <!-- Need to create dummy data source to loop through instead of hard coding -->
+            <tbody>
+                <tr>
+                    <td>Wild Turkey 101</td>
+                    <td>Wild Turkey Distillery</td>
+                    <td>N/A</td>
+                    <td>No</td>
+                    <td>$20.00</td>
+                    <td>Hints if caramel & cherry wood</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script th:replace="partials/scripts :: scripts"></script>
+    </body>
 </html>

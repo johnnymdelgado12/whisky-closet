@@ -13,26 +13,30 @@ public class Whiskey {
 
     private boolean isBlended;
 
+    private String description;
+
     public Whiskey() {
     }
 
     // constructor with id
-    public Whiskey(long id, String name, String distilleryName, Double price, boolean hasAgeStatement, boolean isBlended) {
+    public Whiskey(long id, String name, String distilleryName, Double price, boolean hasAgeStatement, boolean isBlended, String description) {
         this.id = id;
         this.name = name;
         this.distilleryName = distilleryName;
         this.price = price;
         this.hasAgeStatement = hasAgeStatement;
         this.isBlended = isBlended;
+        this.description = description;
     }
 
     // constructor w/out id
-    public Whiskey(String name, String distilleryName, Double price, boolean hasAgeStatement, boolean isBlended) {
+    public Whiskey(String name, String distilleryName, Double price, boolean hasAgeStatement, boolean isBlended, String description) {
         this.name = name;
         this.distilleryName = distilleryName;
         this.price = price;
         this.hasAgeStatement = hasAgeStatement;
         this.isBlended = isBlended;
+        this.description = description;
     }
 
     // GETTERS
@@ -61,6 +65,10 @@ public class Whiskey {
         return isBlended;
     }
 
+    public String description() {
+        return description;
+    }
+
 
     // SETTERS
     public void setId(long id) {
@@ -86,4 +94,9 @@ public class Whiskey {
     public void setBlended(boolean blended) {
         isBlended = blended;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
